@@ -1,0 +1,6 @@
+explanation.txt
+    "A record of what each research file is defined as in this folder"
+links.txt
+    "A record of links for tutorials pertaining to the project as a whole"
+tech_stack.txt
+    "pip3 list >> PATH/Research/NETID/teck_stack.txt"
