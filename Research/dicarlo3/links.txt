@@ -1,2 +1,11 @@
 Python Overall Tutorial:
 https://www.youtube.com/watch?v=_uQrJ0TkZlc
+
+Python Machine Learning Starts with Basics with Examples:
+https://www.w3schools.com/python/python_ml_getting_started.asp
+
+Python Machine Learning 'in more detail':
+https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+
+Yet Another Machine Learning Tutorial...:
+https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_quick_guide.htm
