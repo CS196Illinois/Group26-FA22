@@ -1,0 +1,23 @@
+https://www.kaggle.com/datasets/kausr25/chatterbotenglish
+
+| Name of Dataset | Description |
+| :----:| :----: |
+| botprofile.yml | Personality of Your Chatbot |
+| humor.yml | Joke and Humor |
+| emotion.yml | Emotional Conversations |
+| politics.yml | Political Conversations |
+| ai.yml | General Questions about AI |
+| computers.yml | Conversations about Computer |
+| history.yml | Q&A about Historical Facts and Events |
+| psychology.yml | Psychological Conversations |
+| food.yml | Food Related Conversations. |
+| literature.yml | Conversations about Different Books, Authors, Genres |
+| money.yml | Conversations about Money, Investment, Economy |
+| trivia.yml | Conversations that Have Small Values |
+| gossip.yml | Gossipy Conversations |
+| conversations.yml | Common Conversations |
+| greetings.yml | Different Ways of Greeting |
+| sports.yml | Conversations about Sports. |
+| movies.yml | Conversation about Movies. |
+| science.yml | Conversations about Science  |
+| health.yml | Health Related Questions and Answers. |
