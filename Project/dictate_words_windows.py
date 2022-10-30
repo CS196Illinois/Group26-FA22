@@ -6,7 +6,7 @@ import os
 targetFolder = ("Insert target folder name (must be in Data and Transcripts): " )
 pathname = input("Insert filename (omit .txt) of any file in target folder: " )
 
-keyPath = Path("keyto_linux_" + pathname + ".keeey")
+keyPath = Path("keyto_windows_" + pathname + ".keeey")
 path = Path()
 tryCount = 0
 
