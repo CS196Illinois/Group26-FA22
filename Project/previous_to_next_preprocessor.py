@@ -3,6 +3,54 @@ from collections import OrderedDict
 import os
 #import matplotlib.pyplot as plot
 
+
+class LinkedList:
+    def __init__(self, scriptLength):
+        self.scriptLength = len(allLines)
+        self.starter = self.Item(0, None, None, allLines[0])
+        self.starter.isEnd = True
+        self.starter.isStart = True
+
+    class Item:
+        isQuestion = False
+        isStart = False
+        isEnd = False
+
+        def __init__(self, setValue):
+            self.value = setValue
+            if ('?' in self.value):
+                self.isQuestion = True
+
+        def __init__(self, setLine, setPrev, setNext, setValue):
+            self.line = setLine
+            self.prev = setPrev
+            self.next = setNext
+            self.value = setValue
+            if ('?' in self.value):
+                self.isQuestion = True
+
+    def addToEnd(list, itemToAdd, setLine, setPrev, setNext, setValue):
+        currentItem = list.starter
+        while (currentItem.next is not None):
+            currentItem = currentItem.next
+        currentItem.next = itemToAdd
+        currentItem.isEnd = False
+        itemToAdd.prev = currentItem
+        itemToAdd.next = None
+        itemToAdd.isEnd = True
+    
+    def getItemWithContext(item):
+        if (item == None):
+            return None
+        if (item.prev == None and item.next == None):
+            return ["START", item.value, "END"]
+        if (item.prev == None):
+            return ["START", item.value, item.next.value]
+        if (item.next == None):
+            return [item.prev.value, item.value, "END"]
+        return [item.prev.value, item.value, item.next.value]
+
+
 targetFolder = input("Insert target folder name (must be in Data and Transcripts): ")
 pathname = input("Insert filename (omit .txt) of any file in target folder: ")
 
@@ -64,7 +112,7 @@ for item in os.listdir(savePath):
         print("Making Lines for : " + str(path))
         lines = file.readlines()
         for line in lines:
-            for item in (line.replace('.', "SPLIT").replace('!', "SPLIT").replace('?', "SPLIT").replace(';', "SPLIT").replace(':', "SPLIT")).split("SPLIT"):
+            for item in (line.replace('.', "SPLIT").replace('!', "SPLIT").replace('?', "?SPLIT").replace(';', "SPLIT").replace(':', "SPLIT")).split("SPLIT"):
                 allLines.append(item)
         for line in allLines:
             editedLine = line.lower()
@@ -88,4 +136,6 @@ for item in os.listdir(savePath):
             file.close()
     
     #print("Reading Parsed Files for Linking Process : " + str(path))
-    
+    linked = LinkedList(len(allLines))
+    for line in allLines:
+
