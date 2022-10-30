@@ -3,8 +3,8 @@ from collections import OrderedDict
 import os
 #import matplotlib.pyplot as plot
 
-targetFolder = ("Insert target folder name (must be in Data and Transcripts): " )
-pathname = input("Insert filename (omit .txt) of any file in target folder: " )
+targetFolder = input("Insert target folder name (must be in Data and Transcripts): ")
+pathname = input("Insert filename (omit .txt) of any file in target folder: ")
 
 keyPath = Path("keyto_linux_" + pathname + ".keeey")
 path = Path()
