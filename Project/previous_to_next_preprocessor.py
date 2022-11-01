@@ -16,13 +16,13 @@ if not (keyPath.is_file()):
     stop = False
     # print(os.getcwd())
     with open(keyPath, 'w') as file:
-        while ("value and Transcripts/" + targetFolder not in os.getcwd()):
+        while ("Data and Transcripts/" + targetFolder not in os.getcwd()):
             print(os.getcwd())
             for item in os.listdir(os.getcwd()):
                 #print(item)
                 #print(stop)
-                if item == 'value and Transcripts':
-                    os.chdir('value and Transcripts/' + targetFolder)
+                if item == 'Data and Transcripts':
+                    os.chdir('Data and Transcripts/' + targetFolder)
                     stop = True
                     break
                 if item == targetFolder:
@@ -93,5 +93,6 @@ for item in os.listdir(savePath):
         if (i == 0):
             continue
         linked.addToEnd(allPhrases[i])
+    linked.getContext(True)
 
     
