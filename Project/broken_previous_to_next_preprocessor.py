@@ -1,8 +1,92 @@
 from pathlib import Path
 from collections import OrderedDict
 import os
-import LinkedList
+#import matplotlib.pyplot as plot
 
+class Item():
+    
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+        self.prev = None
+    
+    def setNext(self, setNext):
+        self.next = setNext
+
+    def setPrev(self, setPrev):
+        self.prev = setPrev
+    
+    def setValue(self, setValue):
+        self.value = setValue
+
+    def getNext(self):
+        return self.next
+
+    def getPrev(self):
+        return self.prev
+
+    def getValue(self):
+        return self.value
+        
+
+class LinkedList:
+    
+    def __init__(self, starter: Item):
+        self.starter = starter
+        self.size = 0
+
+    def getSize(self):
+        return self.size
+
+    def addToEnd(self, value):
+        newLine = Item(value)
+        if self.findEnd() == None:
+            print("FAIL")
+            return
+        end = (self.findEnd())
+        newLine.prev = end
+        end.next = newLine
+        newLine.next = None
+
+    def findEnd(self):
+        currentItem = self.starter
+        while (currentItem.getNext() != None):
+            currentItem = currentItem.getNext()
+            print(currentItem == None)
+     
+    def getItem(self, value):
+        currentItem = self.starter
+        while currentItem != None:
+            if currentItem.getValue() == value:
+                return currentItem
+            else:
+                if currentItem.getNext() != None:
+                    currentItem = currentItem.getNext()
+                else:
+                    raise Exception("Value not found in list!")
+    
+    def isInit(self):
+        if self.starter == None:
+            return False
+        return True
+
+    def getContext(self, value):
+
+        try:
+            self.getItem(value)
+        except:
+            return None
+
+        if (self.getItem(value).prev is not None and self.getItem(value).next is not None):
+            return [self.getItem(value).getPrev().getValue(), self.getItem(value).getValue(), self.getItem(value).getNext().getValue()]
+        if (self.getItem(value).prev is not None and self.getItem(value).next is None):
+            return [self.getItem(value).getPrev().getValue(), self.getItem(value).getValue(), "END"]
+        if (self.getItem(value).prev is None and self.getItem(value).next is not None):
+            return ["START", self.getItem(value).getValue(), self.getItem(value).getNext().getValue()]
+        if (self.getItem(value).prev is None and self.getItem(value).next is None):
+            return ["START", self.getItem(value).getValue(), "END"]
+
+        
 targetFolder = input("Insert target folder name (must be in Data and Transcripts): ")
 pathname = input("Insert filename (omit .txt) of any file in target folder: ")
 
@@ -16,13 +100,13 @@ if not (keyPath.is_file()):
     stop = False
     # print(os.getcwd())
     with open(keyPath, 'w') as file:
-        while ("value and Transcripts/" + targetFolder not in os.getcwd()):
+        while ("Data and Transcripts/" + targetFolder not in os.getcwd()):
             print(os.getcwd())
             for item in os.listdir(os.getcwd()):
                 #print(item)
                 #print(stop)
-                if item == 'value and Transcripts':
-                    os.chdir('value and Transcripts/' + targetFolder)
+                if item == 'Data and Transcripts':
+                    os.chdir('Data and Transcripts/' + targetFolder)
                     stop = True
                     break
                 if item == targetFolder:
@@ -88,10 +172,13 @@ for item in os.listdir(savePath):
             file.close()
     
     #print("Reading Parsed Files for Linking Process : " + str(path))
-    linked = LinkedList.LinkedList()
+    linked = LinkedList(Item(allPhrases[0]))
     for i in range(len(allPhrases)):
         if (i == 0):
             continue
         linked.addToEnd(allPhrases[i])
 
-    
+    currentItem = linked.getItem(allPhrases[0])
+    while (currentItem.getNext() != None):
+        print(currentItem.getValueTru())
+        currentItem = currentItem.getNext()
