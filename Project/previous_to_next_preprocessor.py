@@ -93,6 +93,6 @@ for item in os.listdir(savePath):
         if (i == 0):
             continue
         linked.addToEnd(allPhrases[i])
-    linked.getContext(True)
+    linked.getContext()
 
     
