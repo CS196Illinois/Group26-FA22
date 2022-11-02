@@ -1,0 +1,15 @@
+test2 chatbot
+https://colab.research.google.com/drive/1EU-2CJl_Z0QGgEJUbcnEupmFcE8ohlrN?usp=sharing
+
+origin:https://www.kaggle.com/code/muki2003/q-a-chatbot-with-tensorflow-keras
+
+os.listdir
+https://stackoverflow.com/questions/59223136/google-colab-access-machines-local-drives-directly-using-os-listdir
+
+UI (css, html, javascript)
+
+the blue simple chatbot: https://www.youtube.com/watch?v=yXtrlIJzo-A
+wordpress: https://ourvirtualart.wordpress.com/2021/12/13/simple-ai-chatbot/
+
+python engineering sample (probably not use this one)
+https://github.com/python-engineer/chatbot-deployment
