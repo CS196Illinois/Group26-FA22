@@ -54,7 +54,7 @@ for item in os.listdir(savePath):
     wordList = []
     wordSummary = {}
 
-    removeList = ['`','~','!','@','#','$','%','^','&','*','(',')','{','}','[',']','|',';',':','.','/','?','<','>',',']
+    removeList = ['\n','`','~','!','@','#','$','%','^','&','*','(',')','{','}','[',']','|',';',':','.','/','?','<','>',',']
 
     #Iterates through file to prepare for word separation
     #print(path)

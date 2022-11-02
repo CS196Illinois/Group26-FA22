@@ -64,7 +64,7 @@ for item in os.listdir(savePath):
         print("Making Lines for : " + str(path))
         lines = file.readlines()
         for line in lines:
-            for item in (line.replace('.', "SPLIT").replace('!', "SPLIT").replace('?', "?SPLIT").replace(';', "SPLIT").replace(':', "SPLIT")).split("SPLIT"):
+            for item in (line.replace('.', "SPLIT").replace('!', "SPLIT").replace('?', "?SPLIT").replace(';', "SPLIT").replace(':', "SPLIT").replace('\n', "SPLIT")).split("SPLIT"):
                 allLines.append(item)
         for line in allLines:
             editedLine = line.lower()
