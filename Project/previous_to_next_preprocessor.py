@@ -93,7 +93,6 @@ for item in os.listdir(savePath):
         if (i == 0):
             continue
         linked.addToEnd(allPhrases[i])
-        incrementBar = " " * (len(allPhrases) - 1 - i)
         percentageBar = (100 / (len(allPhrases) - 1)) * i
         print(f"\r{percentageBar}%", end=" ", flush=True)
     linked.getContext()
