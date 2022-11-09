@@ -91,6 +91,7 @@ class LinkedList:
     
     if (enablePrints):
       print(output)
+    return output
 
   def getItem(self, targetIndex: int) -> Item:
     temp = self.starter
