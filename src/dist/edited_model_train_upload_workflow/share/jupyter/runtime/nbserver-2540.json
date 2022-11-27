@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/mnt/c/users/SuperJ6/CS124H/Group26-FA22",
+  "password": false,
+  "pid": 2540,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "306db5061d710307a7c624c6d133c4c2c62d6c48b9c88a5b",
+  "url": "http://localhost:8888/"
+}
