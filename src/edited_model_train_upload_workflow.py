@@ -17,9 +17,6 @@
 # In[2]:
 
 
-get_ipython().system('pip -q install transformers')
-
-
 # In[3]:
 
 
@@ -52,7 +49,7 @@ from torch.utils.data.distributed import DistributedSampler
 from tqdm.notebook import tqdm, trange
 
 from pathlib import Path
-
+get_ipython().system('pip -q install transformers')
 from transformers import (
     MODEL_WITH_LM_HEAD_MAPPING,
     WEIGHTS_NAME,
